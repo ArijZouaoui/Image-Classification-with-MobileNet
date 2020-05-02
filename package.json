@@ -1,0 +1,15 @@
+{
+  "name": "ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sketch.js",
+  "scripts": {
+   "deploy": "gh-pages -d client"
+  },
+  "author": "",
+  "license": "ISC",
+
+  "dependencies": {
+    "gh-pages": "^2.2.0"
+  }
+}

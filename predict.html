@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Image Classification
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+ 
+</head>
+
+<body>
+    <main >
+        <div class="container mt-5" >
+           
+            <div class="row" >
+                
+                <div class="col-6">
+                    <h2 class="ml-3">Image</h2> 
+                </div>
+                
+                <div class="col-6">
+                     <h2 class="ml-3">Predictions</h2>
+                </div>
+            
+            </div>
+              
+           
+            <div class="row">
+                
+                <div class='col-6'>
+                    <div id="canvasDiv"></div>
+                    <input id="image-selector" class="form-control border-0" type="file">
+                    <button id="uploadButton" class="btn-dark " style="margin: 12px;" onclick="onUpload()">Upload</button>
+                    <button id="predictButton" class="btn-dark " onclick="onPredict()">Predict</button>
+                </div>
+                
+                <div class="col-6">
+                    
+                    <div class="chart-container">
+                        <canvas id="chart"></canvas>
+                     </div>
+                    <ol id="prediction-list"></ol>
+                </div>
+            </div>
+    
+    
+        </main>
+    
+    
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/0.10.0/lodash.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.min.js"></script>
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <script src="sketch.js"></script>
+
+</body>
