@@ -1,13 +1,14 @@
 {
-  "name": "ui",
+  "name": "client",
   "version": "1.0.0",
   "description": "",
   "main": "sketch.js",
   "scripts": {
    "deploy": "gh-pages -d client"
   },
-  "author": "",
+  "author": "arij",
   "license": "ISC",
+  "homepage": "https://ArijZouaoui.github.io/Image-Classification-with-Mobilenet",
 
   "dependencies": {
     "gh-pages": "^2.2.0"
