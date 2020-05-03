@@ -1,4 +1,4 @@
-let lana, c, ctx, classifier;
+let img, c, ctx, classifier;
 const CHART = document.getElementById('chart');
 CHART.height = 300;
 
@@ -6,8 +6,8 @@ function setup(){
     let canvas = createCanvas (500,440);
     canvas.parent('canvasDiv');
     rawImage = document.getElementById('theImage', imageReady);
-    lana = createImg("./default-image.jpg", imageReady);
-    lana.hide();
+    img = createImg("./default-image.jpg", imageReady);
+    img.hide();
     console.log("gonna load the mobilenet model");
     classifier = ml5.imageClassifier('MobileNet', modelLoaded);
  }
@@ -19,7 +19,7 @@ function modelLoaded() {
 
 
 function imageReady(){
-     image (lana, 0, 0, width, height);
+     image (img, 0, 0, width, height);
 
    
  }
@@ -28,8 +28,8 @@ function onUpload(){
     var file = document.getElementById('image-selector').files[0];
     var reader  = new FileReader();
     reader.onload = function(e)  {
-        lana = createImg(e.target.result, imageReady);
-       lana.hide();
+        img = createImg(e.target.result, imageReady);
+       img.hide();
        
      }
      reader.readAsDataURL(file);
@@ -38,7 +38,7 @@ function onUpload(){
 
 
 function onPredict() {
-    classifier.predict(lana, gotResults);
+    classifier.predict(img, gotResults);
 
 }
 
