@@ -1,7 +1,7 @@
 # Image-Classification-with-Mobilenet
 first line
 
-![TRY IT YOURSELF !] (https://arijzouaoui.github.io/Image-Classification-with-Mobilenet/predict.html)
+[TRY IT YOURSELF !](https://arijzouaoui.github.io/Image-Classification-with-Mobilenet/predict.html)
 
 
  
