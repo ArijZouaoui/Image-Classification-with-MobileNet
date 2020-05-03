@@ -5,7 +5,6 @@ CHART.height = 300;
 function setup(){
     let canvas = createCanvas (500,440);
     canvas.parent('canvasDiv');
-    rawImage = document.getElementById('theImage', imageReady);
     img = createImg("./default-image.jpg", imageReady);
     img.hide();
     console.log("gonna load the mobilenet model");
