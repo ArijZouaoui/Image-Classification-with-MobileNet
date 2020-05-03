@@ -4,13 +4,12 @@
   "description": "",
   "main": "sketch.js",
   "scripts": {
-   "deploy": "gh-pages -d client"
+    "deploy": "gh-pages -d client"
   },
   "author": "arij",
   "license": "ISC",
   "homepage": "https://ArijZouaoui.github.io/Image-Classification-with-Mobilenet",
-
   "dependencies": {
-    "gh-pages": "^2.2.0"
+    "gh-pages": "^2.0.1"
   }
 }
