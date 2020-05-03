@@ -4,7 +4,8 @@
   "description": "",
   "main": "sketch.js",
   "scripts": {
-    "deploy": "gh-pages -d client"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "arij",
   "license": "ISC",
