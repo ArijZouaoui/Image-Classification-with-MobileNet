@@ -1,5 +1,5 @@
 # Image-Classification-with-Mobilenet
-first line
+
 
 [TRY IT YOURSELF HERE](https://arijzouaoui.github.io/Image-Classification-with-Mobilenet/predict.html)
 
