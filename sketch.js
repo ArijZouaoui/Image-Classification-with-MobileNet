@@ -50,8 +50,6 @@ function onPredict() {
     else{
         console.log(results);
         top3 = Array.from(results);
-        console.log(top3);
-        console.log(top3[0].label);
         var getLabels = _.pluck(top3, 'label');
         var getConfidence =  _.pluck(top3, 'confidence');
         
@@ -66,7 +64,7 @@ function onPredict() {
                 datasets: [
                 {
                     label : 'Probability',
-                    backgroundColor: ['red','#f5dcdc','#f1e588'],
+                    backgroundColor: ['#B0E0E6','#f5dcdc','#f1e588'],
                     data: getConfidence
                 }
                ] 
