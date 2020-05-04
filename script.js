@@ -1,6 +1,8 @@
 let img, c, ctx, classifier;
 const CHART = document.getElementById('chart');
 CHART.height = 300;
+let barChart;
+
 
 function setup(){
     let canvas = createCanvas (500,440);
@@ -9,6 +11,29 @@ function setup(){
     img.hide();
     console.log("gonna load the mobilenet model");
     classifier = ml5.imageClassifier('MobileNet', modelLoaded);
+    barChart = new Chart(CHART, {
+        type :'bar',
+        data: {
+            datasets: [
+            {
+                label : 'Probability',
+                backgroundColor: ['#B0E0E6','#f5dcdc','#f1e588'],
+              
+            }
+           ] 
+        },
+        options: {
+            legend: { display: false },
+            title: {
+              display: true,
+              text: 'Image Classification - MobileNet'
+            }
+          }
+    }
+    );
+    
+     
+
  }
 
  
@@ -18,6 +43,7 @@ function modelLoaded() {
 
 
 function imageReady(){
+  // 
      image (img, 0, 0, width, height);
 
    
@@ -31,13 +57,16 @@ function onUpload(){
        img.hide();
        
      }
+     barChart.destroy();
      reader.readAsDataURL(file);
   
 }
 
 
 function onPredict() {
+    
     classifier.predict(img, gotResults);
+   
 
 }
 
@@ -55,8 +84,8 @@ function onPredict() {
         for (var i=0; i<getConfidence.length; i++) {
             getConfidence[i] = (getConfidence[i]*100).toFixed(2);
         } 
-
-        let barChart = new Chart(CHART, {
+        
+         barChart = new Chart(CHART, {
             type :'bar',
             data: {
                 labels: getLabels,
@@ -77,6 +106,7 @@ function onPredict() {
               }
         }
         );
+        
          
     }
 }
