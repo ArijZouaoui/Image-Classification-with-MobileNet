@@ -43,7 +43,7 @@ function modelLoaded() {
 
 
 function imageReady(){
-  // 
+ 
      image (img, 0, 0, width, height);
 
    
